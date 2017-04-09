@@ -1,0 +1,8 @@
+<p>Current Value: <%= @value %></p>
+<p>
+  <%= form_tag :redis, method: :patch do %>
+    <%= label_tag :value, "New Value" %>
+    <%= text_field_tag :value %>
+    <%= submit_tag %>
+  <% end %>
+</p>
