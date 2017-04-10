@@ -1,0 +1,8 @@
+<p>Trace a method</p>
+<p>
+  <%= form_tag :timers, method: :post do %>
+    <%= label_tag :value, "Enter a number between 0 and 5 inclusive to trace a method that will essentially sleep that long in seconds" %>
+    <%= text_field_tag :value %>
+    <%= submit_tag %>
+  <% end %>
+</p>
