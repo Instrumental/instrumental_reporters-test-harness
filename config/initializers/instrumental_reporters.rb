@@ -1,1 +1,1 @@
-InstrumentalReporters.activate("406d5b9977fd0f033e3f2e4c3e7b8b89")
+InstrumentalReporters.activate(ENV["INSTRUMENTAL_API_KEY"])
