@@ -26,5 +26,7 @@ module InstrumentalReportersTestHarness
     config.active_job.queue_adapter = :delayed_job
 
     config.eager_load_paths += %W(#{config.root}/app/jobs)
+
+    config.cache_store = :dalli_store
   end
 end
