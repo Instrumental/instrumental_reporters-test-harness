@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   resource :delayed_job, only: %i[show create]
 
+  resource :sidekiq, only: %i[show create]
+
+  resource :resque, only: %i[show create]
+
   resource :memcached, only: %i[show update]
 
   resource :timers, only: %i[show create]

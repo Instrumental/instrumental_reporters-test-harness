@@ -32,11 +32,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem "instrumental_reporters", git: "https://github.com/Instrumental/instrumental_reporters.git"
+# gem "instrumental_reporters"
+# gem "instrumental_reporters", git: "https://github.com/Instrumental/instrumental_reporters.git"
+gem "instrumental_reporters", path: "/Users/joel/projects/instrumental_reporters"
 
 gem "redis"
 
 gem "delayed_job_active_record"
+gem "daemons"
+
+gem "sidekiq"
+
+gem "resque"
 
 gem "dalli"
 

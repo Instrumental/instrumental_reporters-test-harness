@@ -1,0 +1,7 @@
+<p>
+  <%= form_tag :sidekiq, method: :post do %>
+    <%= label_tag :state, "Enter one of 'error' or 'success' to create a job that will fail or succeed" %>
+    <%= text_field_tag :state %>
+    <%= submit_tag %>
+  <% end %>
+</p>
