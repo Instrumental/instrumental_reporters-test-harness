@@ -1,0 +1,6 @@
+<p>Make a request against example.com using Net::HTTP</p>
+<p>
+  <%= form_tag :external_service, method: :post do %>
+    <%= submit_tag "GET http://example.com/" %>
+  <% end %>
+</p>
