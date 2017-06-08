@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   resource :exceptions, only: %i[show create]
 
+  resource :external_service, only: %i[show create]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
