@@ -10,5 +10,8 @@
 
 <%= yield %>
 
+  <% unless request.path == "/" %>
+    <p><a href="/">&laquo; home</a></p>
+  <% end %>
 </body>
 </html>

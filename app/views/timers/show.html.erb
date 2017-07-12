@@ -1,8 +1,13 @@
-<p>Trace a method</p>
+<h1>Trace a method</h1>
 <p>
   <%= form_tag :timers, method: :post do %>
     <%= label_tag :value, "Enter a number between 0 and 5 inclusive to trace a method that will essentially sleep that long in seconds" %>
     <%= text_field_tag :value %>
     <%= submit_tag %>
   <% end %>
+</p>
+
+
+<p>
+  <img src="https://instrumentalapp.com/graphs/Wmd4OE1JMm9RVDZid2pFSmdxU3ZldWkvLkxQMUc0Q0VlaU9TWWRNZjRXMzlTUzdmLkxSVGk/new.png?graph%5Bmetrics%5D%5B%5D=tracer.timers_controller.do_timer&graph%5Bmetrics%5D%5B%5D=gauge_count%28tracer.timers_controller.do_timer%29&id=new&project_id=1492&theme=dark&resolution=60&duration=1800" />
 </p>
