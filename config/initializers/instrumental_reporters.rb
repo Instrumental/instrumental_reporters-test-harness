@@ -1,1 +1,1 @@
-InstrumentalReporters.activate(ENV["INSTRUMENTAL_API_KEY"])
+Metrician.activate(ENV["INSTRUMENTAL_PROJECT_TOKEN"])
