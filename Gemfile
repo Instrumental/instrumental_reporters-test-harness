@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.8'
+gem 'rails', '~>4.2.8'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -34,7 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # gem "instrumental_reporters"
 # gem "instrumental_reporters", git: "https://github.com/Instrumental/instrumental_reporters.git"
-gem "instrumental_reporters", path: "/Users/joel/projects/instrumental_reporters"
+gem "metrician", path: "/Users/joel/projects/metrician-ruby"
 
 gem "redis"
 
