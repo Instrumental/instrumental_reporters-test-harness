@@ -13,5 +13,5 @@ class TimersController < ApplicationController
     value = [[0, params[:value].to_i].min, 5].max
     sleep(rand * value)
   end
-  add_instrumental_method_tracer :do_timer
+  add_metrician_method_tracer :do_timer
 end
