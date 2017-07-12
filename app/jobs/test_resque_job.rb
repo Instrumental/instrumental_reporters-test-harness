@@ -1,5 +1,5 @@
 class TestResqueJob
-  extend Instrumental::ResquePlugin
+  extend Metrician::Jobs::ResquePlugin
 
   @queue = :default
 
