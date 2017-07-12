@@ -32,9 +32,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# gem "instrumental_reporters"
-# gem "instrumental_reporters", git: "https://github.com/Instrumental/instrumental_reporters.git"
-gem "metrician", path: "/Users/joel/projects/metrician-ruby"
+# gem "metrician"
+gem "metrician", git: "https://github.com/Instrumental/metrician-ruby.git"
+# gem "metrician", path: "/Users/joel/projects/metrician-ruby"
 
 gem "redis"
 
@@ -65,3 +65,5 @@ end
 group :development, :test do
   gem "pry-rails"
 end
+
+gem 'rails_12factor', group: :production
