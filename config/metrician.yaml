@@ -1,11 +1,11 @@
-# A configuration for Metrician that control features of our
+# A configuration for Metrician that controls the features of our
 # automated metric reporting
 
 ---
 
-# "request_timing" settings control the Rack timing middleware's features
+# "request_timing" settings control the features of the Request Timing Rack Middleware
 :request_timing:
-  # allow insertion of Rack middleware for request timing
+  # hook into Rack middleware for request timing
   :enabled: true
 
   # collect basic request timing for every request
@@ -37,10 +37,20 @@
   :route_tracking:
     :enabled: false
 
+  # "apdex" controls the recording of metrics to measure apdex
+  # More here: https://en.wikipedia.org/wiki/Apdex
+  # Note this requires "request" tracking to be enabled
+  :apdex:
+    :enabled: true
+
+    # set the threshold (seconds), above which a request is no longer
+    # considered "sasifactory". The "tolerates" threshold will be
+    # 4x this number.
+    :satisfied_threshold: 2.5
 
 # "database" settings control ActiveRecord metric reporting features
 :database:
-  # allow insertion of ActiveRecord adapter
+  # hook into ActiveRecord for db call timing
   :enabled: true
 
   # collect basic query tracking for every query
@@ -48,19 +58,18 @@
     :enabled: true
 
   # collect generic sql query information (select, update, insert, etc.)
-  :sql:
+  :command:
     :enabled: false
 
-  # collect query information for specific tables and ActiveRecord
-  # based queries (find, update, destroy)
-  :active_record:
+  # collect query information for specific tables
+  :table:
     :enabled: false
 
 
 # "external_service" settings control reporting metrics when Net::HTTP
 # is used to make requests
 :external_service:
-  # insert Net::HTTP monkey patch to record metrics
+  # hook into Net::HTTP to record timing metrics
   :enabled: true
 
   # collect basic external request timing information
@@ -68,15 +77,15 @@
     :enabled: true
 
 
-# "queue" settings control reporting metrics when ruby job systems
-# work through their job queues
-:queue:
+# "jobs" settings control reporting metrics when ruby job systems
+# work through their queues
+:jobs:
 
-  # insert job system middleware and monkey patches when presence detected
+  # hook into job system middleware when presence detected
   :enabled: true
 
   # record the basic timing of every job
-  :process:
+  :run:
     :enabled: true
 
   # record when an error occurs in the a job
@@ -91,10 +100,10 @@
 # application caches like memcached and redis
 :cache:
 
-  # insert cache system tracking and monkey patching
+  # hook into caching libraries
   :enabled: true
 
-  # record the basic timing of every command
+  # record aggregate timing information for all cache commands
   :command:
     :enabled: true
 
@@ -107,7 +116,7 @@
 # by an exception tracker in your application
 :exception:
 
-  # insert exception tracking instrumenation and monkey patching
+  # hook into exception tracking libraries
   :enabled: false
 
   # report when an exception is raised and caught by an exception tracker
@@ -117,3 +126,11 @@
   # report a metric per exception type raised
   :exception_specific:
     :enabled: false
+
+# "method_tracing" settings control hooking into Module and allowing
+# ruby methods to be timed
+:method_tracer:
+
+  # hook into Module with add_metrician_method_tracer added as a base
+  # feature of every ruby object
+  :enabled: true
