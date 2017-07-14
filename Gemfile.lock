@@ -102,6 +102,7 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.6)
       pry (>= 0.10.4)
+    puma (3.9.1)
     rack (1.6.8)
     rack-protection (1.5.3)
       rack
@@ -215,6 +216,7 @@ DEPENDENCIES
   metrician!
   pg
   pry-rails
+  puma
   rails (~> 4.2.8)
   rails_12factor
   redis
