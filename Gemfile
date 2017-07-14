@@ -36,8 +36,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 # gem "metrician"
-# gem "metrician", git: "https://github.com/Instrumental/metrician-ruby.git"
-gem "metrician", path: "/Users/joel/projects/metrician-ruby"
+gem "metrician", git: "https://github.com/Instrumental/metrician-ruby.git"
+# gem "metrician", path: "/Users/joel/projects/metrician-ruby"
 
 gem "redis"
 

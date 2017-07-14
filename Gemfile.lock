@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/joel/projects/metrician-ruby
+GIT
+  remote: https://github.com/Instrumental/metrician-ruby.git
+  revision: 3d048f63ac06b2e6298102003624056cf9725320
   specs:
     metrician (0.0.1)
       instrumental_agent
