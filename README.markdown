@@ -34,3 +34,9 @@ heroku ps:scale worker=0 sidekiq=0 resque=1
 ```
 heroku ps:scale resque=0 sidekiq=0 worker=1
 ```
+
+#### Shut them all down. Forever.
+
+```
+heroku ps:scale resque=0 sidekiq=0 worker=0
+```
