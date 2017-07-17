@@ -1,7 +1,13 @@
+<h1>Test Resque</h1>
+
 <p>
   <%= form_tag :resque, method: :post do %>
-  <%= label_tag :state, "Enter one of 'error' or 'success' to create a job that will fail or succeed" %>
-  <%= text_field_tag :state %>
-  <%= submit_tag %>
+    <%= label_tag :state, "Enter one of 'error' or 'success' to create a job that will fail or succeed" %>
+    <%= text_field_tag :state %>
+    <%= submit_tag %>
   <% end %>
+</p>
+
+<p>
+  <img src="https://instrumentalapp.com/graphs/VmFTSEc2VWpPY1V1V3NtTzFWWW53dVcubnJnZmFkYmhHclRrZFBFbVNDQzF2UGhPSjViLi4/new.png?graph[metrics][]=jobs.error&graph[metrics][]=jobs.run&graph[metrics][]=gauge_count(jobs.run)&id=new&project_id=1492&theme=dark&resolution=60&duration=1800" />
 </p>
