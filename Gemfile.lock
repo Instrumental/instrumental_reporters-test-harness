@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Instrumental/metrician-ruby.git
-  revision: 8acb83a4bbe51d97a1f2782c4253122be0dfbedc
+  revision: 520eb43519db7c79cf6a93f42b4fde3dcfe3d95a
   specs:
     metrician (0.0.1)
       instrumental_agent
