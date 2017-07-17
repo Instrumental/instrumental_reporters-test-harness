@@ -18,24 +18,24 @@
 
   # report time between requests in a server process as idle time
   :idle:
-    :enabled: false
+    :enabled: true
 
   # report the payload size of requests
   :response_size:
-    :enabled: false
+    :enabled: true
 
   # report the amount of time spent on middleware per request
   :middleware:
-    :enabled: false
+    :enabled: true
 
   # report the amount of time a request spent queued at the web layer
   # before hitting Rack
   :queue_time:
-    :enabled: false
+    :enabled: true
 
   # report the controller, action, and verb for every request
   :route_tracking:
-    :enabled: false
+    :enabled: true
 
   # "apdex" controls the recording of metrics to measure apdex
   # More here: https://en.wikipedia.org/wiki/Apdex
@@ -59,11 +59,11 @@
 
   # collect generic sql query information (select, update, insert, etc.)
   :command:
-    :enabled: false
+    :enabled: true
 
   # collect query information for specific tables
   :table:
-    :enabled: false
+    :enabled: true
 
 
 # "external_service" settings control reporting metrics when Net::HTTP
@@ -94,7 +94,7 @@
 
   # record metrics for each kind of job that is worked from the queue
   :job_specific:
-    :enabled: false
+    :enabled: true
 
 # "cache" settings control timing of commands to services often used as
 # application caches like memcached and redis
@@ -109,7 +109,7 @@
 
   # record the timing of each command as its own metric
   :command_specific:
-    :enabled: false
+    :enabled: true
 
 
 # "exception" settings control reporting when exceptions are caught
@@ -117,7 +117,7 @@
 :exception:
 
   # hook into exception tracking libraries
-  :enabled: false
+  :enabled: true
 
   # report when an exception is raised and caught by an exception tracker
   :raise:
@@ -125,7 +125,7 @@
 
   # report a metric per exception type raised
   :exception_specific:
-    :enabled: false
+    :enabled: true
 
 # "method_tracing" settings control hooking into Module and allowing
 # ruby methods to be timed
