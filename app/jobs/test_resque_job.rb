@@ -1,7 +1,7 @@
 class TestResqueJob
   extend Metrician::Jobs::ResquePlugin
 
-  @queue = :default
+  @queue = :default_resque
 
   def self.perform(options)
     return if options["success"]
