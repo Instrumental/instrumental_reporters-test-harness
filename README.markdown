@@ -9,7 +9,13 @@ You can view live data [on heroku](https://metrician-test-harness.herokuapp.com/
 This is running on a free dyno, so right now only the sidekiq integration is working (because 1 worker).
 
 
-## Altering the running job system
+## The running job system
+
+What job system is happening right now?
+
+```
+heroku ps
+```
 
 #### Running sidekiq:
 
