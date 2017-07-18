@@ -10,7 +10,7 @@ class TimersController < ApplicationController
   private
 
   def do_timer
-    value = [[0, params[:value].to_i].max, 5].min
+    value = [[0, params[:value].to_i].max, 20].min
     sleep(rand * value)
   end
   add_metrician_method_tracer :do_timer
