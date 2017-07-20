@@ -1,9 +1,8 @@
 GIT
   remote: https://github.com/Instrumental/metrician-ruby.git
-  revision: ae6a210323d0039db81bceb5e2b929fd5673e724
+  revision: 487645ef35e23a9276d21e617afb7e673f3ec8da
   specs:
     metrician (0.0.1)
-      instrumental_agent
 
 GEM
   remote: https://rubygems.org/
@@ -211,6 +210,7 @@ DEPENDENCIES
   dalli
   delayed_job_active_record
   honeybadger
+  instrumental_agent
   jbuilder (~> 2.0)
   jquery-rails
   metrician!

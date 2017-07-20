@@ -1,1 +1,0 @@
-Metrician.activate(ENV["INSTRUMENTAL_PROJECT_TOKEN"])

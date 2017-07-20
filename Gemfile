@@ -40,6 +40,7 @@ gem "puma"
 # gem "metrician"
 gem "metrician", git: "https://github.com/Instrumental/metrician-ruby.git"
 # gem "metrician", path: "/Users/joel/projects/metrician-ruby"
+gem "instrumental_agent"
 
 gem "redis"
 
